@@ -2,12 +2,16 @@ import React from 'react';
 import { ArrowRight, FileText } from 'lucide-react';
 
 export default function Hero() {
+  const skills = [
+    "HTML5", "CSS3", "C", "C++", "Java", "JavaScript", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Git", "Docker"
+  ];
+
   return (
-    <section className="relative px-6 py-24 md:py-32 overflow-hidden flex items-center justify-center">
+    <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden flex flex-col items-center justify-center min-h-[85vh]">
       {/* Subtle Background Decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
       
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center z-10 px-6">
         <h2 className="text-sm font-semibold tracking-wider text-blue-600 uppercase mb-4">
           Xin chào, tôi là
         </h2>
@@ -33,6 +37,32 @@ export default function Hero() {
             Liên hệ
           </a>
         </div>
+      </div>
+
+      {/* Skills Infinite Scroll Marquee */}
+      <div className="mt-20 md:mt-28 w-full max-w-[100vw] overflow-hidden relative flex">
+         {/* Fade left/right edges */}
+         <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
+         <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
+         
+         <div className="flex animate-infinite-scroll w-max hover:[animation-play-state:paused]">
+            {/* First Set */}
+            <div className="flex shrink-0">
+               {skills.map((skill, idx) => (
+                  <span key={idx} className="mx-3 md:mx-4 px-5 py-2.5 bg-white shadow-sm whitespace-nowrap rounded-xl text-slate-700 font-bold md:text-lg border border-slate-200/60 hover:border-blue-300 hover:text-blue-600 transition-colors cursor-default">
+                    {skill}
+                  </span>
+               ))}
+            </div>
+            {/* Duplicated Set for Infinite Effect */}
+            <div className="flex shrink-0">
+               {skills.map((skill, idx) => (
+                  <span key={`dup-${idx}`} className="mx-3 md:mx-4 px-5 py-2.5 bg-white shadow-sm whitespace-nowrap rounded-xl text-slate-700 font-bold md:text-lg border border-slate-200/60 hover:border-blue-300 hover:text-blue-600 transition-colors cursor-default">
+                    {skill}
+                  </span>
+               ))}
+            </div>
+         </div>
       </div>
     </section>
   );
