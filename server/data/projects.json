@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "title": "Doctor Directory Application",
+        "description": "Hệ thống Full-stack quản lý thông tin và tìm kiếm hẹn khám bác sĩ. Phát triển RESTful API bằng Node.js/Express, kết nối MongoDB. Đóng gói môi trường với Docker.",
+        "tags": [
+            "Node.js",
+            "Express",
+            "MongoDB"
+        ],
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "title": "Nghiên cứu Blockchain trong Y tế (EHR)",
+        "description": "Đề xuất giải pháp Blockchain quản lý hồ sơ y tế điện tử an toàn. Thiết kế kiến trúc sơ bộ bảo mật, tính minh bạch cao.",
+        "tags": [
+            "Blockchain",
+            "System Architecture",
+            "Research"
+        ],
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "title": "Portfolio Web App",
+        "description": "Dự án portfolio cá nhân với thiết kế Minimalist, tương tác mượt mà và tính năng responsive.",
+        "tags": [
+            "Vite",
+            "React",
+            "Express",
+            "Tailwind CSS"
+        ],
+        "link": "#"
+    }
+]

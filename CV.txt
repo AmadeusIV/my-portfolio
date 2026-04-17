@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc} 
+\usepackage{geometry}
+\geometry{a4paper, left=1.2cm, right=1.2cm, top=1.2cm, bottom=1.2cm}
+
+\usepackage{xcolor}
+\definecolor{primary}{RGB}{155, 95, 75} 
+\definecolor{heading}{RGB}{40, 40, 40}  
+\definecolor{textcol}{RGB}{50, 50, 50}  
+
+\usepackage[solid]{fontawesome5}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{paracol} 
+
+\titleformat{\section}{\Large\bfseries\color{heading}}{}{0em}{}[\vspace{-0.3em}\color{primary}\rule{\linewidth}{1.5pt}]
+\titlespacing{\section}{0pt}{1.2em}{0.8em}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\color{textcol}
+
+\begin{document}
+
+% ---------------- PHẦN HEADER ----------------
+\begin{minipage}[t]{0.25\textwidth}
+    \vspace{0pt} 
+    \begin{tikzpicture}
+        \clip (0,0) circle (2.2cm);
+        \node at (0,-0.4) {\includegraphics[width=4.5cm]{1.png}}; % Thay 1.png bằng file ảnh của bạn
+    \end{tikzpicture}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.72\textwidth}
+    \vspace{0.8cm} 
+    {\Huge \bfseries Hoàng Mạnh Quân} \\[0.5em]
+    {\Large \bfseries \color{primary} Backend Developer Intern} \\[1em]
+    Sinh viên năm 2 chuyên ngành Kỹ thuật Phần mềm với nền tảng vững về Lập trình hướng đối tượng và Cấu trúc dữ liệu. Định hướng phát triển Web/Backend với hệ sinh thái Node.js, có kinh nghiệm thực tế trong việc phân tích thiết kế hệ thống, xây dựng API và đóng gói ứng dụng với Docker. Mong muốn đóng góp giá trị cho dự án thực tế của công ty thông qua vị trí thực tập.
+\end{minipage}
+
+\vspace{1cm}
+
+% ---------------- PHẦN NỘI DUNG (2 CỘT) ----------------
+\columnratio{0.45} % Tăng diện tích cột trái để trình bày dự án STAR
+\setlength{\columnsep}{2.5em} 
+\begin{paracol}{2}
+
+    % ================= CỘT TRÁI (DỰ ÁN & HỌC VẤN) =================
+    
+\section*{Thông tin cá nhân}
+    \begin{tabular}{@{}p{0.15\linewidth} p{0.8\linewidth}@{}}
+        \textcolor{primary}{\faPhone} & +84 945 992 866 \\
+        \textcolor{primary}{\faEnvelope} & quanhm0412@gmail.com \\
+        \textcolor{primary}{\faMapMarker*} & TP. Hồ Chí Minh \\
+        
+    \end{tabular}
+
+    \section*{Kỹ năng chuyên môn}
+    \begin{itemize}[leftmargin=1.2em, itemsep=0.5em]
+        \item \textbf{Ngôn ngữ/Framework:} Node.js, Express.js, React, Tailwind CSS.
+        \item \textbf{Cơ sở dữ liệu:} SQL, MongoDB (NoSQL).
+        \item \textbf{Hạ tầng \& Công cụ:} Docker, Git.
+        \item \textbf{Quy trình \& Phân tích:} Agile/Scrum, SRS Documentation, Requirement Engineering, Figma (UI/UX).
+    \end{itemize}
+
+
+    \section*{Kỹ năng mềm}
+    \begin{itemize}[leftmargin=1.2em, itemsep=0.3em]
+        \item \textbf{Làm việc nhóm:} Phối hợp, phân chia công việc và báo cáo tiến độ hiệu quả.
+        \item \textbf{Tư duy logic:} Giải quyết vấn đề tự tin dựa trên nền tảng kỹ thuật vững.
+        \item Khả năng nghiên cứu tài liệu kỹ thuật tốt.
+        \item \textbf{Tiếng Anh:} Sử dụng tiếng Anh cơ bản.
+    \end{itemize}
+
+    \section*{Học vấn}
+    \textbf{\textcolor{primary}{Trường Chuyên Đại học Vinh}}\\
+    Khối Chuyên Tin\\
+    Tốt nghiệp loại: Giỏi\\
+    \textbf{\textcolor{primary}{Trường Đại Học Văn Lang}} \\
+    Khoa Kỹ thuật Cơ điện và Máy tính \\
+    Sinh viên năm 2, GPA: 3.0\\
+    Chuyên ngành: Kỹ thuật Phần mềm
+    
+
+\switchcolumn
+
+    % ================= CỘT PHẢI (THÔNG TIN & KỸ NĂNG) =================
+    \section*{Dự án tiêu biểu}
+
+    \textbf{\textcolor{primary}{Doctor Directory Application}} \\
+    \textit{Full-stack Developer}
+    \begin{itemize}[leftmargin=1em, labelsep=0.5em, itemsep=0.2em]
+        \item \textbf{S:} Quy trình quản lý lịch hẹn bác sĩ thủ công gây tốn thời gian.
+        \item \textbf{T:} Xây dựng hệ thống Full-stack quản lý thông tin và tìm kiếm bác sĩ.
+        \item \textbf{A:} Phát triển RESTful API bằng Node.js/Express, kết nối MongoDB. Sử dụng Docker để đóng gói toàn bộ môi trường (FE, BE, DB).
+        \item \textbf{R:} Hệ thống triển khai nhanh chóng, nhất quán trên các môi trường.
+    \end{itemize}
+
+    
+
+    \textbf{\textcolor{primary}{Nghiên cứu Blockchain trong Y tế (EHR)}} \\
+    \textit{Research Member}
+    \begin{itemize}[leftmargin=1em, labelsep=0.5em, itemsep=0.2em]
+        \item \textbf{S:} Bảo mật và tính minh bạch của hồ sơ y tế là thách thức lớn.
+        \item \textbf{T:} Đề xuất giải pháp Blockchain để quản lý hồ sơ y tế điện tử an toàn.
+        \item \textbf{A:} Nghiên cứu cấu trúc Blockchain, tham gia viết đề xuất nghiên cứu khoa học và thiết kế kiến trúc hệ thống sơ bộ.
+        \item \textbf{R:} Đề tài được đánh giá cao về tính bảo mật và khả năng ứng dụng thực tế.
+    \end{itemize}
+    
+
+\end{paracol}
+
+\end{document}
